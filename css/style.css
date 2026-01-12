@@ -1,0 +1,157 @@
+/* ✨ ألوان طبية محسّنة */
+:root {
+    --primary-color: #36a9e1; /* أزرق طبي */
+    --primary-light: #7fd3ff;
+    --primary-dark: #1a7fb8;
+
+    --glass-white: rgba(255, 255, 255, 0.35);
+    --glass-border: rgba(255, 255, 255, 0.25);
+
+    --neon-blue: #7fd3ff;
+
+    --light-bg: #f2f9ff;
+    --dark-color: #1d2b36;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    background: linear-gradient(135deg, #e8f7ff, #f4fbff);
+    color: #333;
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+/* ✨ Navbar طبي */
+.navbar {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary-color));
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+    transition: 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--primary-light) !important;
+}
+
+/* ✨ قسم الواجهة */
+.hero-section {
+    background: linear-gradient(rgba(20, 118, 168, 0.7), rgba(20, 118, 168, 0.7)),
+    url('https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1400&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1.4s ease;
+}
+
+/* ✨ أنيميشن ناعم */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ✨ كروت زجاجية شفافة مع نيون */
+.service-card, .dashboard-card, .doctor-card {
+    background: var(--glass-white);
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+}
+
+.service-card:hover,
+.dashboard-card:hover,
+.doctor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 0px 18px var(--neon-blue);
+}
+
+/* ✨ زر طبي */
+.btn-primary {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary-color));
+    border: none;
+    border-radius: 8px;
+    padding: 10px 25px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 8px rgba(54,169,225,0.5);
+}
+
+.btn-primary:hover {
+    box-shadow: 0px 0px 18px rgba(54,169,225,0.9);
+    transform: translateY(-3px);
+}
+
+/* ✨ عنوان الأقسام */
+.section-title {
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.section-title:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    margin: 12px auto 0;
+    border-radius: 5px;
+}
+
+/* ✨ جداول */
+.table th {
+    background: linear-gradient(90deg, var(--primary-dark), var(--primary-color));
+    color: white;
+}
+
+/* ✨ نموذج تسجيل الدخول */
+.login-container {
+    max-width: 420px;
+    margin: 100px auto;
+    padding: 35px;
+    border-radius: 15px;
+    background: var(--glass-white);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 35px rgba(0,0,0,0.1);
+    animation: fadeIn 1.4s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(54,169,225,0.5);
+}
+
+/* ✨ الآفات */
+.alert {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(54, 169, 225, 0.2);
+}
+
+.alert-info {
+    background-color: #dff6ff;
+    color: #065a82;
+}
+
+/* ✨ صورة الملف */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border: 5px solid var(--primary-light);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px rgba(54,169,225,0.5);
+}
+
+/* ✨ تأثير نيون على النص */
+.glow-text {
+    color: var(--primary-dark);
+    text-shadow: 0 0 8px var(--primary-light);
+}
